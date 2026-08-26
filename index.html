@@ -171,19 +171,39 @@
   }
 
   .scenenav {
-    position: fixed; right: 1.25rem; top: 50%; transform: translateY(-50%);
+    position: fixed; right: 1.5rem; top: 50%; transform: translateY(-50%);
     z-index: 60;
-    display: flex; flex-direction: column; align-items: flex-end; gap: 6px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .scenenav::after {
+    content: ''; position: absolute; right: 3.5px; top: 6px; bottom: 6px;
+    width: 1px; background: var(--color-border-default); z-index: -1;
   }
   .scenenav a {
+    display: flex; align-items: center; justify-content: flex-end; gap: 10px;
     text-decoration: none; color: var(--color-fg-muted);
     font-size: var(--garden-meta-size); font-weight: 500;
-    padding: 5px 13px; border-radius: var(--radius-pill); white-space: nowrap;
-    background: color-mix(in srgb, var(--color-bg-base) 78%, transparent);
+  }
+  .scenenav .lb {
+    opacity: 0; transform: translateX(4px); transition: opacity .18s ease, transform .18s ease;
+    padding: 3px 10px; border-radius: var(--radius-pill); white-space: nowrap;
+    background: color-mix(in srgb, var(--color-bg-base) 82%, transparent);
     backdrop-filter: blur(8px);
     border: 1px solid var(--color-border-subtle);
   }
-  .scenenav a.on { background: var(--color-fg-strong); border-color: var(--color-fg-strong); color: var(--color-bg-base); font-weight: 700; }
+  .scenenav:hover .lb, .scenenav a.on .lb { opacity: 1; transform: none; }
+  .scenenav .dot {
+    width: 8px; height: 8px; border-radius: 50%; flex: none;
+    border: 1.5px solid var(--color-fg-muted); background: var(--color-bg-base);
+    transition: border-color .18s ease, background .18s ease, box-shadow .18s ease;
+  }
+  .scenenav a:hover .dot { border-color: var(--color-fg-strong); }
+  .scenenav a.on .dot {
+    background: var(--color-accent-brand); border-color: var(--color-accent-brand);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-accent-brand) 18%, transparent);
+  }
+  .scenenav a.on .lb { background: var(--color-fg-strong); border-color: var(--color-fg-strong); color: var(--color-bg-base); font-weight: 700; }
+  @media (prefers-reduced-motion: reduce) { .scenenav .lb, .scenenav .dot { transition: none; } }
   @media (max-width: 1280px) { .scenenav { display: none; } }
 
   section.scene { position: relative; padding: var(--section-y) 0; }
@@ -684,13 +704,13 @@
 
 <div class="draft-banner">가안 — 교회 4주 속성편 · 컨셉 검증용, 배포 대상 아님 (D63: 모집은 톡방 공고 하나) · HOLYGROUND TOKENS V1.0</div>
 
-<nav class="scenenav" id="scenenav">
-  <a href="#s-hero" class="on">소개</a>
-  <a href="#s-problem">왜 필요한가</a>
-  <a href="#s-price">회비</a>
-  <a href="#s-curri">결과물</a>
-  <a href="#s-target">이런 분들께</a>
-  <a href="#s-faq">FAQ</a>
+<nav class="scenenav" id="scenenav" aria-label="장면 이동">
+  <a href="#s-hero" class="on"><span class="lb">소개</span><span class="dot"></span></a>
+  <a href="#s-problem"><span class="lb">왜 필요한가</span><span class="dot"></span></a>
+  <a href="#s-price"><span class="lb">회비</span><span class="dot"></span></a>
+  <a href="#s-curri"><span class="lb">결과물</span><span class="dot"></span></a>
+  <a href="#s-target"><span class="lb">이런 분들께</span><span class="dot"></span></a>
+  <a href="#s-faq"><span class="lb">FAQ</span><span class="dot"></span></a>
 </nav>
 
 <!-- ═══ 01 HERO ═══ -->
