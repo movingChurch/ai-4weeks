@@ -1,3 +1,6 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>인공지능 다스리기 — 속성편</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&family=Geist+Mono:wght@400;500&display=swap">
 <style>
@@ -730,6 +733,99 @@
   }
   .included .seq b { display: inline; font-size: inherit; color: var(--color-fg-default); }
   @media (max-width: 720px) { .included { padding: var(--space-6); } }
+
+  /* ══════════════════════════════════════════════════════════════
+   * 모바일 패스 (2026-08-27) — 카톡방으로 도는 페이지다. 폰이 기본이다.
+   * 격자 칸이 min-content로 부풀어 가로로 넘치던 것을 먼저 막고,
+   * 그 다음 여백·활자·바닥 바를 폰 치수로 다시 잡는다.
+   * ══════════════════════════════════════════════════════════════ */
+  .hero-grid > *, .outcome > *, .story > *, .teacher > *,
+  .part > *, .notice li > *, .teacher-rows > div > *,
+  .included li > *, .result li > *, .metastrip > div { min-width: 0; }
+
+  @media (max-width: 640px) {
+    :root {
+      --section-y: 3.5rem;
+      --container-pad-x: 1.25rem;
+      --garden-sub-size: 1.125rem;
+    }
+
+    h2 { font-size: clamp(1.75rem, 7.4vw, 2.25rem); line-height: 1.2; }
+    .hero h1 { font-size: clamp(2.25rem, 11vw, 2.75rem); line-height: 1.12; }
+    .lede { font-size: 1.0625rem; margin-top: var(--space-4); }
+
+    /* 히어로 — 위쪽 여백을 걷고, 삽화는 접힌 뒤 너무 커지지 않게 */
+    .hero { padding: var(--space-8) 0 var(--space-6); }
+    .hero-grid { gap: var(--space-8); }
+    .course-eyebrow { margin-bottom: var(--space-4); padding: 4px 12px 4px 9px; }
+    .promise { max-width: none; }
+    .hero-art { aspect-ratio: 4 / 3; padding: 5% 4%; }
+    .hero-ctas { gap: var(--space-3); }
+    .hero-ctas .btn-lg { flex: 1 1 100%; }
+
+    /* 구성 요약 — 4칸·2칸 격자는 폰에서 글자가 잘린다. 한 줄에 항목 하나로 */
+    .metastrip { grid-template-columns: 1fr; margin-top: var(--space-8); }
+    .metastrip > div,
+    .metastrip > div + div {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: var(--space-3); text-align: left;
+      padding: var(--space-3) 0;
+      border-left: none; border-bottom: none;
+      border-top: 1px solid var(--color-border-subtle);
+    }
+    .metastrip > div:first-child { border-top: none; }
+    .metastrip .n { font-size: 1rem; }
+    .metastrip .l { margin-top: 0; text-align: right; flex: none; }
+
+    /* 회비 — 두 값이 한 줄에 서면 넘친다 */
+    .tier { padding: var(--space-6); }
+    .tier .v { font-size: 1.875rem; }
+    .tier .price-flow { flex-wrap: wrap; row-gap: var(--space-2); }
+    .tier .was { margin-right: 2.4rem; }
+    .tier .was::before { width: calc(104% + 1.8rem); }
+    .tier .was::after { left: calc(102% + 1.8rem); }
+    .derived { font-size: 11.5px; letter-spacing: .04em; }
+    .anchor-note { padding-left: var(--space-3); }
+
+    /* 카드 안쪽 여백 — 폰에서 32px는 글의 폭을 너무 깎는다 */
+    .story, .teacher, .path, .bound, .included { padding: var(--space-6); }
+    .outcome .body { padding: 1.25rem var(--space-6); }
+    .outcome h3 { font-size: 1.1875rem; }
+    .outcome .vis { min-height: 8.5rem; }
+    .result .rbody, .loot-body { padding: var(--space-4) 1.25rem var(--space-6); }
+    .notice ul { padding: 1.25rem; }
+    .notice li { grid-template-columns: 1fr; gap: 2px; }
+    .lessons, details.week summary { padding-left: var(--space-4); padding-right: var(--space-4); }
+    .teacher-rows > div { grid-template-columns: 1fr; gap: 2px; }
+    .teacher-rows .t { padding-top: 0; }
+
+    /* 같이 쓰는 것들 — 3단은 폰에서 칸이 110px밖에 안 된다.
+       (기존 900px 규칙이 기본 규칙보다 앞에 서 있어 먹지 않았다) */
+    .tools { grid-template-columns: repeat(2, 1fr); }
+
+    /* FAQ·본문 — 손가락으로 눌리는 크기 */
+    .collapse-title { font-size: 1.0625rem; }
+    .ghost-link { display: inline-block; padding: var(--space-2) 0; }
+
+    /* 바닥 신청 바 — 값과 버튼이 한 줄에 남게 깎는다 */
+    .buybar {
+      padding: var(--space-2) var(--container-pad-x);
+      padding-bottom: calc(var(--space-2) + env(safe-area-inset-bottom, 0px));
+    }
+    .buybar-in { gap: var(--space-3); }
+    .buybar .p .title { display: none; }
+    .buybar .p b { font-size: 1.125rem; }
+    .buybar .p .sub { display: block; margin-left: 0; font-size: 11px; }
+    .buybar .btn-lg { font-size: 1rem; padding-inline: var(--space-4); white-space: nowrap; }
+    body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+  }
+
+  /* 아주 좁은 폰 (아이폰 SE 등) */
+  @media (max-width: 380px) {
+    .buybar .btn-lg { padding-inline: var(--space-3); font-size: 0.9375rem; }
+    .tier .v { font-size: 1.6875rem; }
+  }
+
 </style>
 
 
@@ -1112,7 +1208,7 @@
     <h2>매번 대화창에 다시 설명하던 일,<br>한 번 가르치면 같은 결과물이 나오게 만듭니다.</h2>
     <p class="lede">9/5 (토) 오전 10시에 시작하고 접수 순서대로 받습니다.</p>
     <a class="btn btn-primary btn-lg" href="https://forms.gle/W7FGFHfqCXeYxsE27">신청 폼 작성하기</a>
-    <p class="closing-ask">궁금한 게 있으면 <a href="https://open.kakao.com/me/captaindev">오픈 카톡</a>으로 바로 물어보세요.<br>소식은 <a href="https://open.kakao.com/o/g0jagPof">인공지능 다스리기 오픈 카카오 커뮤니티</a>에서도 이어집니다.</p>
+    <p class="closing-ask">궁금한 게 있으면 <a href="https://open.kakao.com/me/captaindev">개발대장 카톡</a>으로 편하게 물어보세요.</p>
   </div>
 </section>
 
@@ -1125,7 +1221,7 @@
       <li><b>준비물</b><span>노트북 한 대. 필요한 프로그램은 1주차에 다 같이 깝니다.</span></li>
       <li><b>녹화본</b><span>각 회차 녹화본을 수강생께 드립니다. 빠진 주가 있어도 따라오실 수 있습니다.</span></li>
       <li><b>회비</b><span>일반 99,000원 · 사역자 49,000원. 신청은 폼으로 받고, 결제 안내는 신청하신 분께 따로 드립니다.</span></li>
-      <li><b>문의</b><span><a href="https://open.kakao.com/me/captaindev">오픈 카톡</a>으로 바로 물어보실 수 있습니다. <a href="https://open.kakao.com/o/g0jagPof">인공지능 다스리기 오픈 카카오 커뮤니티</a>도 열려 있습니다.</span></li>
+      <li><b>문의</b><span>궁금한 건 <a href="https://open.kakao.com/me/captaindev">개발대장 카톡</a>으로 편하게 물어보세요. 신청 전이라도 좋습니다.</span></li>
     </ul>
     <p class="colophon">이 페이지도 양은성이 인공지능한테 시켜서 만들었습니다. 4주 뒤에는 이런 일을 여러분의 비서가 합니다.</p>
   </div>
