@@ -45,5 +45,3 @@
   }, { rootMargin: '-15% 0px -60% 0px' });
   navLinks.forEach(link => observer.observe(document.querySelector(link.hash)));
 })();
-
-(()=>{let next=false;const button=document.getElementById('db-switch');button.onclick=()=>{next=!next;document.getElementById('db-round').textContent=next?'다음 제작 · 같은 디자인 기준':'첫 번째 제작';document.getElementById('db-input').textContent=next?'내용: 내 일을 맡기는 실습':'내용: 인공지능 비서 만들기';document.querySelectorAll('.db-title').forEach(e=>e.innerHTML=next?'내 일도,<br>함께 맡겨보세요.':'내 컴퓨터에<br>인공지능 비서를.');document.querySelectorAll('.db-desc').forEach(e=>e.textContent=next?'내 파일로 직접 실습합니다.':'설치부터 함께합니다.');button.textContent=next?'첫 번째 제작으로 돌아가기 ↺':'다음 홍보물에도 적용해 보기 →'}})();
