@@ -57,11 +57,7 @@
     .proof-step strong{font-size:27px;line-height:1.35}
     .proof-step p{margin:8px 0 0;color:#c6c5bf}
     .poster-proof{margin:0}
-    .poster-sheet{position:relative;isolation:isolate}
-    .poster-sheet::before,.poster-sheet::after{content:"";position:absolute;inset:0;background:#f1efe7;border:1px solid #cfcdc3;box-shadow:0 16px 32px rgba(0,0,0,.18);z-index:0}
-    .poster-sheet::before{transform:translate(-7px,8px) rotate(-2.1deg)}
-    .poster-sheet::after{transform:translate(8px,5px) rotate(1.45deg);background:#faf8f1}
-    .poster-sheet img{position:relative;z-index:1;width:100%;background:var(--paper);box-shadow:var(--shadow)}
+    .poster-proof img{width:100%;background:var(--paper);box-shadow:var(--shadow)}
     .poster-proof figcaption{padding-top:16px;color:#b8b7b0;font-size:15px}
     .boundary{margin-top:48px;padding-top:24px;border-top:1px solid #55544f;color:#d5d4ce}
     .boundary strong{color:var(--mint)}
@@ -134,7 +130,6 @@
     }
     @media(max-width:430px){
       body{font-size:16px;line-height:1.62}.wrap{width:calc(100% - 32px)}.section{padding-block:40px}h2{font-size:34px}.lead{font-size:19px;line-height:1.5}.hero{padding-bottom:34px}.hero .brandline{margin-bottom:36px}.hero h1{font-size:43px;margin-bottom:22px}.hero-actions{display:grid;margin:24px 0 28px}.hero-actions .button{width:100%}.facts{grid-template-columns:1fr 1fr}.fact,.fact+.fact,.fact:nth-child(3){padding:12px 10px 12px 0;border-left:0}.fact:nth-child(2n){padding-left:10px;border-left:1px solid rgba(255,255,255,.35)}.fact:nth-child(n+3){border-top:1px solid rgba(255,255,255,.35)}.fact strong{font-size:15px}.proof-layout{gap:22px;margin-top:26px}.proof-step{padding:15px 0}.proof-step strong{font-size:21px}.proof-step p{font-size:15px;line-height:1.55}.boundary{margin-top:24px;padding-top:16px}.poster-proof{width:min(48%,220px)}.method-intro{gap:16px;margin-bottom:24px}.method-intro p{font-size:17px}.method article{padding:16px 0}.method h3{font-size:21px}.method p{font-size:15px}.result-line{margin-top:24px;padding:18px 0;font-size:18px}.course-map{grid-template-columns:1fr 1fr;margin:24px 0}.course-map li,.course-map li+li,.course-map li:nth-child(3){padding:12px 10px 12px 0;border-left:0}.course-map li:nth-child(2n){padding-left:10px;border-left:1px solid var(--line)}.course-map li:nth-child(n+3){border-top:1px solid var(--line)}.course-map strong{font-size:16px}.course-map p{font-size:14px}summary{padding-block:15px;font-size:17px}summary::after{top:10px}.auto-track{margin-top:28px}.auto-step{padding:15px 0}.auto-step strong{margin-top:10px;font-size:21px}.human-check{margin-top:20px}.support-grid{gap:34px}.support-list{margin-top:24px}.support-list li{padding:14px 0}.support-list strong{font-size:18px}.faq h3{margin-bottom:16px}.teacher-layout{gap:16px}.teacher h2{font-size:32px}.teacher-copy{font-size:16px}.price-line{display:grid;gap:12px;margin:24px 0;padding:16px 0}.price-line strong{font-size:28px}.terms div{grid-template-columns:68px 1fr;padding:11px 0}.sticky p span{display:none}
-      .poster-sheet::before{transform:translate(-4px,5px) rotate(-1.3deg)}.poster-sheet::after{transform:translate(5px,3px) rotate(.9deg)}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.sticky{transition:none}}
   </style>
@@ -174,7 +169,7 @@
             <p class="boundary"><strong>강사가 실제 업무를 인공지능에게 맡긴 사례입니다.</strong><br>포스터 디자인을 따라 만드는 수업은 아닙니다. 수강생은 자신의 전문 분야에서 평소 하던 업무를 하나 선택합니다.</p>
           </div>
           <figure class="poster-proof">
-            <div class="poster-sheet"><img src="poster.png" width="1240" height="1754" alt="이 과정에서 인공지능과 함께 만든 인공지능 다스리기 포스터"></div>
+            <img src="poster.png" width="1240" height="1754" alt="이 과정에서 인공지능과 함께 만든 인공지능 다스리기 포스터">
             <figcaption>실제 산출물 · 인공지능 다스리기 모집 포스터</figcaption>
           </figure>
         </div>
