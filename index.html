@@ -132,7 +132,34 @@
       body{font-size:16px;line-height:1.62}.wrap{width:calc(100% - 32px)}.section{padding-block:40px}h2{font-size:34px}.lead{font-size:19px;line-height:1.5}.hero{padding-bottom:34px}.hero .brandline{margin-bottom:36px}.hero h1{font-size:43px;margin-bottom:22px}.hero-actions{display:grid;margin:24px 0 28px}.hero-actions .button{width:100%}.facts{grid-template-columns:1fr 1fr}.fact,.fact+.fact,.fact:nth-child(3){padding:12px 10px 12px 0;border-left:0}.fact:nth-child(2n){padding-left:10px;border-left:1px solid rgba(255,255,255,.35)}.fact:nth-child(n+3){border-top:1px solid rgba(255,255,255,.35)}.fact strong{font-size:15px}.proof-layout{gap:22px;margin-top:26px}.proof-step{padding:15px 0}.proof-step strong{font-size:21px}.proof-step p{font-size:15px;line-height:1.55}.boundary{margin-top:24px;padding-top:16px}.poster-proof{width:min(48%,220px)}.method-intro{gap:16px;margin-bottom:24px}.method-intro p{font-size:17px}.method article{padding:16px 0}.method h3{font-size:21px}.method p{font-size:15px}.result-line{margin-top:24px;padding:18px 0;font-size:18px}.course-map{grid-template-columns:1fr 1fr;margin:24px 0}.course-map li,.course-map li+li,.course-map li:nth-child(3){padding:12px 10px 12px 0;border-left:0}.course-map li:nth-child(2n){padding-left:10px;border-left:1px solid var(--line)}.course-map li:nth-child(n+3){border-top:1px solid var(--line)}.course-map strong{font-size:16px}.course-map p{font-size:14px}summary{padding-block:15px;font-size:17px}summary::after{top:10px}.auto-track{margin-top:28px}.auto-step{padding:15px 0}.auto-step strong{margin-top:10px;font-size:21px}.human-check{margin-top:20px}.support-grid{gap:34px}.support-list{margin-top:24px}.support-list li{padding:14px 0}.support-list strong{font-size:18px}.faq h3{margin-bottom:16px}.teacher-layout{gap:16px}.teacher h2{font-size:32px}.teacher-copy{font-size:16px}.price-line{display:grid;gap:12px;margin:24px 0;padding:16px 0}.price-line strong{font-size:28px}.terms div{grid-template-columns:68px 1fr;padding:11px 0}.sticky p span{display:none}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.sticky{transition:none}}
-  </style>
+  .teacher-summary{display:grid;gap:4px;margin:28px 0 0;font-size:16px;line-height:1.6}.teacher-summary span{color:#effff4}.teacher-summary a{width:fit-content;min-height:44px;display:flex;align-items:center;color:var(--mint);font-weight:750}.teacher-layout{grid-template-columns:.8fr 1.4fr;gap:72px}.teacher-intro{font-size:19px;color:var(--muted);max-width:30ch}.teacher .role{font-size:16px;line-height:1.6;letter-spacing:0}.career{padding:32px 0;border-top:1px solid var(--line)}.career:first-child{padding-top:0;border:0}.career:last-child{padding-bottom:0}.career-heading{display:flex;justify-content:space-between;align-items:baseline;gap:16px}.career-heading h3{margin:0;font-size:28px;letter-spacing:-.02em}.career-heading>span{font-size:14px;white-space:nowrap;color:var(--muted)}.career-role{font-size:15px;line-height:1.6;margin:8px 0 20px;color:var(--muted)}.career-role strong{font-weight:650;color:var(--green-dark)}.career h4{margin:0 0 16px;font-size:21px;line-height:1.5;letter-spacing:-.025em}.career ul{padding-left:20px;margin:0;color:#3e3d38;font-size:17px}.career li+li{margin-top:8px}.current-work{margin:0}.current-work>div{display:grid;grid-template-columns:56px 1fr;gap:12px;margin-top:12px;font-size:17px}.current-work dt{color:var(--green-dark);font-weight:750}.current-work dd{margin:0;color:#3e3d38}.career-links{display:flex;flex-wrap:wrap;gap:4px 24px;margin-top:16px;font-size:15px;font-weight:700;color:var(--green-dark)}.career-links a{min-height:44px;display:inline-flex;align-items:center}.teacher-credentials{display:grid;grid-template-columns:1.4fr .8fr;gap:72px;border-top:1px solid var(--line);margin-top:48px;padding-top:36px}.teacher-credentials h3{font-size:24px;margin-bottom:24px}.teacher-credentials dl{margin:0}.teacher-credentials dl>div+div{margin-top:20px}.teacher-credentials dt{font-weight:750;font-size:17px}.teacher-credentials dd{margin:4px 0 0;font-size:15px;color:var(--muted);line-height:1.65}.school{font-size:18px;font-weight:700;margin-bottom:20px}#teacher{scroll-margin-top:24px}@media(max-width:800px){.teacher-layout,.teacher-credentials{grid-template-columns:1fr;gap:32px}.teacher-intro{max-width:45ch}.teacher-credentials{margin-top:32px;padding-top:28px}.teacher-credentials section+section{border-top:1px solid var(--line);padding-top:28px}}@media(max-width:430px){.career-heading{display:block}.career-heading>span{display:block;margin-top:4px}.career-heading h3{font-size:25px}.career{padding-block:28px}.career h4{font-size:19px}.career ul,.current-work>div{font-size:16px}.teacher-summary{font-size:14px}.career-role{font-size:14px}}
+/* Final refinement: preserve the paper, green and editorial grid. */
+:root{--space-xs:8px;--space-sm:16px;--space-md:24px;--space-lg:32px;--space-xl:48px;--space-2xl:64px}
+h1,h2,h3{letter-spacing:-.035em}
+.hero{min-height:0;padding-bottom:56px}
+.hero .brandline{margin-bottom:72px}
+.hero h1{max-width:1020px;font-size:clamp(48px,6.1vw,84px);line-height:1.1}
+.hero .lead{font-size:clamp(20px,2.1vw,26px);max-width:800px}
+.teacher-summary{grid-template-columns:1fr auto;column-gap:32px;max-width:800px;padding-top:20px;border-top:1px solid #ffffff66}
+.teacher-summary strong{grid-column:1}.teacher-summary span{grid-column:1}.teacher-summary a{grid-column:2;grid-row:1/3;align-self:center}
+.hero-actions{margin-top:24px;margin-bottom:36px}
+.button{border-radius:3px}.button:active{transform:translateY(0)}
+.section{padding-block:88px}
+.teacher-layout{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.4fr);grid-template-areas:"identity career" "credentials career";grid-template-rows:auto 1fr;column-gap:88px;row-gap:40px;align-items:start}
+.teacher-identity{grid-area:identity}.career-list{grid-area:career;min-width:0}
+.teacher h2{font-size:clamp(36px,3.7vw,50px);line-height:1.15;margin-bottom:20px}
+.teacher .role{font-size:14px;margin-bottom:20px}.teacher-intro{font-size:17px;line-height:1.7;margin-bottom:0}
+.teacher-credentials{grid-area:credentials;display:grid;grid-template-columns:1fr;gap:32px;margin:0;padding-top:28px;border-top:1px solid var(--line)}
+.teacher-credentials h3{font-size:21px;margin-bottom:20px}.teacher-credentials dt{font-size:16px}.teacher-credentials dd{font-size:14px}.teacher-credentials dl>div+div{margin-top:20px}
+.teacher-credentials section+section{border-top:1px solid var(--line);padding-top:28px}.teacher-credentials .school{font-size:16px;margin-bottom:16px}
+.career{padding-block:36px}.career-heading h3{font-size:30px}.career-heading>span{font-variant-numeric:tabular-nums;font-size:13px}.career-role{margin-top:8px;margin-bottom:20px}.current .career-heading h3{color:var(--green-dark)}
+.career h4{font-weight:750;font-size:21px;line-height:1.5}.current h4{font-size:24px;line-height:1.45}
+.current-work>div{font-size:16px;margin-top:16px}.career ul{font-size:16px;line-height:1.75}
+.career-links{margin-top:20px;font-size:14px;gap:0 24px}.career-links a{text-decoration-thickness:1px;text-underline-offset:5px}.career-links a:hover{color:var(--ink);text-decoration-thickness:2px}
+@media(max-width:1000px) and (min-width:801px){.teacher-layout{column-gap:40px}.career-heading{display:block}.career-heading>span{display:block;margin-top:8px}}
+@media(max-width:800px){.section{padding-block:56px}.hero .brandline{margin-bottom:48px}.teacher-layout{grid-template-columns:1fr;grid-template-areas:"identity" "career" "credentials";grid-template-rows:auto;gap:32px}.teacher-identity{max-width:560px}.teacher-credentials{grid-template-columns:1fr 1fr;column-gap:32px}.teacher-credentials section+section{padding-top:0;border-top:0}.teacher-summary{column-gap:16px}.teacher .role{font-size:14px}.career{padding-block:28px}}
+@media(max-width:430px){.section{padding-block:40px}.hero{padding-bottom:32px}.hero .brandline{margin-bottom:36px}.hero h1{font-size:43px}.hero .lead{font-size:19px}.teacher-summary{grid-template-columns:1fr;padding-top:16px;margin-top:24px;gap:4px}.teacher-summary a{grid-column:1;grid-row:auto}.hero-actions{margin-top:16px;margin-bottom:24px}.teacher-credentials{grid-template-columns:1fr}.teacher-credentials section+section{padding-top:24px;border-top:1px solid var(--line)}.teacher h2{font-size:36px}.teacher-intro{font-size:16px}.career-heading{display:flex;align-items:baseline;gap:12px}.career-heading h3{font-size:26px}.career-heading>span{font-size:12px}.current h4{font-size:21px}.career h4{font-size:19px}.current-work>div{grid-template-columns:48px 1fr;gap:8px;font-size:15px}.career ul{font-size:15px}.career-role{font-size:13px}.teacher-credentials h3{font-size:21px}}
+</style>
 </head>
 <body>
   <main id="app">
@@ -141,7 +168,7 @@
         <div class="brandline"><span>HolyGround · 양은성</span><span>인공지능 다스리기 · 속성편</span></div>
         <h1 id="hero-title">ChatGPT 대화창을 넘어,<br><span>내 컴퓨터에 인공지능 비서를.</span></h1>
         <p class="lead">평소 쓰는 업무 자료를 가져와 직접 실습합니다. 프로그램을 설치하고 작업 공간을 설정하는 단계부터, 내가 하던 일을 인공지능에게 맡기는 방법까지 함께 배웁니다.</p>
-        <div class="hero-actions">
+        <div class="teacher-summary"><strong>강사 · HolyGround 양은성 대표</strong><span>실외 배송 로봇·자율주차 소프트웨어 설계·개발</span><a href="#teacher">강사 경력 보기 ↓</a></div><div class="hero-actions">
           <a class="button" href="https://forms.gle/W7FGFHfqCXeYxsE27" target="_blank" rel="noopener">신청서 작성하기 <span aria-hidden="true">↗</span></a>
           <a class="button secondary" href="#proof">과정 살펴보기</a>
         </div>
@@ -245,12 +272,17 @@
       </div>
     </section>
 
-    <section class="section teacher" aria-labelledby="teacher-title">
-      <div class="wrap teacher-layout">
-        <div><h2 id="teacher-title">HolyGround<br>양은성 대표</h2><p class="role">실외 배송 로봇·자율주행 자동차의 핵심 소프트웨어 설계·개발</p></div>
-        <div class="teacher-copy"><p>HolyGround를 운영하며 강의 기획, 소프트웨어 개발, 교육 콘텐츠 제작과 홍보에 인공지능을 활용하고 있습니다.</p><p>수업에서는 강사가 실제로 사용하는 작업 환경을 보여드립니다. 수강생도 자신의 노트북에 프로그램을 설치하고 업무 자료를 연결합니다. 이어서 평소 일하는 순서와 좋은 결과의 기준을 인공지능에게 알려줍니다.</p></div>
-      </div>
-    </section>
+    <section id="teacher" class="section teacher" aria-labelledby="teacher-title">
+<div class="wrap">
+<div class="teacher-layout">
+<div class="teacher-identity"><h2 id="teacher-title">HolyGround<br>양은성 대표</h2><p class="role">Robotics &amp; Autonomous Driving<br>Software Architect</p><p class="teacher-intro">로봇과 자동차의 소프트웨어를 설계한 경험을 바탕으로, 인공지능과 일하는 방법을 가르칩니다.</p></div>
+<div class="career-list">
+<article class="career current"><div class="career-heading"><h3>HolyGround</h3><span>2023.06–현재</span></div><p class="career-role">Founder &amp; CEO</p><h4>교육 플랫폼을 직접 만들고,<br>인공지능으로 일하는 방법을 가르칩니다.</h4><dl class="current-work"><div><dt>교육</dt><dd>업무 자료·지침을 연결해 인공지능에게 일을 맡기고 결과를 확인하는 방법 교육</dd></div><div><dt>플랫폼</dt><dd>강의와 교육 콘텐츠를 제공하는 플랫폼 직접 개발·운영</dd></div><div><dt>실무</dt><dd>강의 기획·콘텐츠 제작·개발·홍보에 인공지능 활용</dd></div></dl><div class="career-links"><a href="https://www.holyground.world/ko/garden/captaindev" target="_blank" rel="noopener">교육 플랫폼 보기 ↗</a><a href="#proof">실제 활용 사례 보기 ↑</a></div></article>
+<article class="career"><div class="career-heading"><h3>Robotis</h3><span>2019.01–2021.12</span></div><p class="career-role">Last Mile Delivery Robot Team<br><strong>Perception Part Tech Lead</strong></p><h4>실외 배송 로봇의 주변 환경 인식 시스템 개발</h4><ul><li>프로젝트 초기 개발 멤버로 카메라·센서 구성과 시스템 구조 직접 설계</li><li>주변 환경 인식 소프트웨어 설계·개발</li></ul><div class="career-links"><a href="https://robotis.us/collections/outdoor-delivery-robot" target="_blank" rel="noopener">공식 로봇 소개 ↗</a><a href="https://www.youtube.com/watch?v=Rbf1_C01xL8" target="_blank" rel="noopener">작동 영상 보기 ↗</a></div></article>
+<article class="career"><div class="career-heading"><h3>StradVision</h3><span>2021.12–2023.05</span></div><p class="career-role">Parking Team<br><strong>Visual SLAM Software Architect</strong></p><h4>자율주차에 필요한 차량 위치 인식 소프트웨어 개발</h4><ul><li>자율주차용 위치 인식 소프트웨어의 메인 프레임워크 설계·구현</li></ul><div class="career-links"><a href="https://stradvision.com/dh/product_surround" target="_blank" rel="noopener">공식 자율주차 기술·시연 보기 ↗</a></div></article>
+</div>
+<div class="teacher-credentials"><section aria-labelledby="teaching-title"><h3 id="teaching-title">주요 교육 경력</h3><dl><div><dt>프로그래머스 · 자율주행 데브코스</dt><dd>2022–2024 · 1·2·3·5·6기 멘토 및 C++ 특강 강사<br>소프트웨어 설계·코드 리뷰·프로젝트 지도</dd></div><div><dt>SSAFY · 취업특강</dt><dd>2024 · 개발 직군 취업 준비생 대상 IT 포트폴리오 특강</dd></div><div><dt>HolyGround · 인공지능 활용 교육</dt><dd>2026 · 업무 자료·지침 구성과 반복 업무 자동화 교육</dd></div></dl></section><section aria-labelledby="education-title"><h3 id="education-title">학력</h3><p class="school">충북대학교 제어로봇공학</p><dl><div><dt>박사 수료</dt><dd>2017.03–2019.02</dd></div><div><dt>석사 졸업</dt><dd>2014.03–2017.02</dd></div></dl></section></div>
+</div></div></section>
 
     <section id="enroll" class="section enroll" aria-labelledby="enroll-title">
       <div class="wrap enroll-grid">
